@@ -18,7 +18,7 @@ export const addTeacherAsync = createAsyncThunk("teachers/addTeacher", async (te
 // UPDATE 
 export const updateTeacherAsync = createAsyncThunk("teachers/updateTeacher", 
     async (teacherData) => {
-        const response = await axios.put(`${BASE_URL}/${teacherData._id}`)
+        const response = await axios.put(`${BASE_URL}/${teacherData._id}`, teacherData)
         return response.data;
     }
 )
